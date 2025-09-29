@@ -3,34 +3,34 @@
 This dataset was generated in Python (`dataset.py`) as part of the activity **SUPERVISED vs UNSUPERVISED LEARNING**.  
 It contains 500 synthetic student records with demographic, academic, and financial information, plus the target variable **dropout (yes/no)**.
 
----
+
 
 ## How to generate the dataset
 
 First, run the Python script to create the file `dropout_data.csv`:
 
-```bash
+bash
 python dataset.py
-```
+
 
 This will create a CSV file named **dropout_data.csv** in the same folder.
 
----
+
 
 ## How to open the dataset
 
 Once the CSV file has been generated, you can open it in Python with pandas:
 
-```python
+python
 import pandas as pd
 
 df = pd.read_csv("dropout_data.csv")
 
 print(df.shape)   # Show dataset dimensions (rows, columns)
 print(df.head())  # Show the first 5 rows
-```
 
----
+
+
 
 ## Variables
 
@@ -46,14 +46,14 @@ print(df.head())  # Show the first 5 rows
 - **financial_aid** (categorical): 'yes' or 'no'.  
 - **dropout** (categorical): 'yes' or 'no'. Target variable generated with higher probability for students with low academic performance, no scholarship, and loans.
 
----
+
 
 ## Missing values and outliers
 
 - Missing values were introduced in `gender`, `origin`, `highschool_avg`, `first_sem_avg`, `scholarship`, and `loan`.  
 - Outliers were added in `age`, `highschool_avg`, and `admission_score` to simulate data issues.  
 
----
+
 
 ## Dataset size
 
